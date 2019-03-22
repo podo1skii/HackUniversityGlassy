@@ -1,19 +1,27 @@
 import React from 'react';
 import connect from '@vkontakte/vkui-connect';
-import { View } from '@vkontakte/vkui';
+import { Epic, Tabbar, TabbarItem } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 
-import Home from './panels/Home';
-import Persik from './panels/Persik';
+import Icon28User from '@vkontakte/icons/dist/28/user';
+import Icon28Place from '@vkontakte/icons/dist/28/place';
+import Icon28Favorite from '@vkontakte/icons/dist/28/favorite';
+
+
+import Profile from './panels/Profile';
 
 class App extends React.Component {
-	constructor(props) {
+	constructor (props) {
 		super(props);
-
 		this.state = {
-			activePanel: 'home',
-			fetchedUser: null,
+			activeStory: 'events',
+			fetchedUser: null
 		};
+		this.onStoryChange = this.onStoryChange.bind(this);
+	}
+
+	onStoryChange (e) {
+		this.setState({ activeStory: e.currentTarget.dataset.story })
 	}
 
 	componentDidMount() {
@@ -23,22 +31,47 @@ class App extends React.Component {
 					this.setState({ fetchedUser: e.detail.data });
 					break;
 				default:
-					console.log(e.detail.type);
+					// console.log(e.detail.type);
 			}
 		});
 		connect.send('VKWebAppGetUserInfo', {});
-	}
 
-	go = (e) => {
-		this.setState({ activePanel: e.currentTarget.dataset.to })
-	};
+		connect.subscribe((e) => {
+			console.log(e.detail);
+			switch (e.detail.type) {
+				case 'VKWebAppGeodataResult':
+					this.setState({ locationUser: e.detail.data });
+					break;
+				default:
+					console.log(e.detail.type);
+			}
+		});
+		connect.send('VKWebAppGetGeodata', {});
+	}
 
 	render() {
 		return (
-			<View activePanel={this.state.activePanel}>
-				<Home id="home" fetchedUser={this.state.fetchedUser} go={this.go} />
-				<Persik id="persik" go={this.go} />
-			</View>
+			<Epic activeStory={this.state.activeStory} tabbar={
+				<Tabbar>
+					<TabbarItem
+						onClick={this.onStoryChange}
+						selected={this.state.activeStory === 'events'}
+						data-story="events"
+					><Icon28Favorite /></TabbarItem>
+					<TabbarItem
+						onClick={this.onStoryChange}
+						selected={this.state.activeStory === 'map'}
+						data-story="map"
+					><Icon28Place /></TabbarItem>
+				  	<TabbarItem
+						onClick={this.onStoryChange}
+						selected={this.state.activeStory === 'profile'}
+						data-story="profile"
+				  	><Icon28User /></TabbarItem>
+				</Tabbar>
+				}>
+				<Profile id="profile" fetchedUser={this.state.fetchedUser} />
+			</Epic>
 		);
 	}
 }
