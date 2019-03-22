@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/HackUniversityGlassy/precache-manifest.5dcfa01d952c7611edb775a1988ce1a9.js"
+  "/HackUniversityGlassy/precache-manifest.d2874caccb6c79834d45835ec391780e.js"
 );
 
 workbox.clientsClaim();
