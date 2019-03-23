@@ -5,11 +5,11 @@ import '@vkontakte/vkui/dist/vkui.css';
 import Icon24MoreHorizontal from '@vkontakte/icons/dist/24/more_horizontal';
 
 
-class Events  extends React.Component{
+class EventInfo  extends React.Component{
     constructor (props) {
 		super(props);
 		this.state = {
-            activePanel: 'events'
+            
 		};
         this.onChangePanel = this.onChangePanel.bind(this);
 	}
@@ -43,4 +43,4 @@ class Events  extends React.Component{
     }
 }
 
-export default Events;
+export default EventInfo;

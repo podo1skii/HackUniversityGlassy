@@ -11,6 +11,8 @@ import Icon28More from '@vkontakte/icons/dist/28/more';
 
 import Profile from './panels/Profile';
 import Events from './panels/Events';
+import Feed from './panels/Feed';
+
 
 class App extends React.Component {
 	constructor (props) {
@@ -74,6 +76,7 @@ class App extends React.Component {
 				}>
 				<Profile id="profile" fetchedUser={this.state.fetchedUser} />
 				<Events id="events" fetchedUser={this.state.fetchedUser} />
+				<Feed id="feed" fetchedUser={this.state.fetchedUser} />
 			</Epic>
 		);
 	}

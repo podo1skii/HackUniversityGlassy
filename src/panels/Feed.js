@@ -5,11 +5,11 @@ import '@vkontakte/vkui/dist/vkui.css';
 import Icon24MoreHorizontal from '@vkontakte/icons/dist/24/more_horizontal';
 
 
-class Events  extends React.Component{
+class Feed extends React.Component{
     constructor (props) {
 		super(props);
 		this.state = {
-            activePanel: 'events'
+            activePanel: 'feed'
 		};
         this.onChangePanel = this.onChangePanel.bind(this);
 	}
@@ -20,9 +20,9 @@ class Events  extends React.Component{
 
     render() {
         return (
-            <View id="events" activePanel={this.state.activePanel}>
-                <Panel id="events">
-                    <PanelHeader>Мои события</PanelHeader>
+            <View id="feed" activePanel={this.state.activePanel}>
+                <Panel id="feed">
+                    <PanelHeader>Лента</PanelHeader>
 
                     <React.Fragment>
                         <Group>
@@ -43,4 +43,4 @@ class Events  extends React.Component{
     }
 }
 
-export default Events;
+export default Feed;
