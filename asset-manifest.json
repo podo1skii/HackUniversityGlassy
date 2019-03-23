@@ -1,13 +1,15 @@
 {
-  "main.js": "/HackUniversityGlassy/static/js/main.c8caa306.chunk.js",
-  "main.js.map": "/HackUniversityGlassy/static/js/main.c8caa306.chunk.js.map",
+  "main.css": "/HackUniversityGlassy/static/css/main.f6c3601c.chunk.css",
+  "main.js": "/HackUniversityGlassy/static/js/main.db4cf15f.chunk.js",
+  "main.js.map": "/HackUniversityGlassy/static/js/main.db4cf15f.chunk.js.map",
   "runtime~main.js": "/HackUniversityGlassy/static/js/runtime~main.71f94ddc.js",
   "runtime~main.js.map": "/HackUniversityGlassy/static/js/runtime~main.71f94ddc.js.map",
   "static/css/2.d329aeec.chunk.css": "/HackUniversityGlassy/static/css/2.d329aeec.chunk.css",
-  "static/js/2.437a5fd9.chunk.js": "/HackUniversityGlassy/static/js/2.437a5fd9.chunk.js",
-  "static/js/2.437a5fd9.chunk.js.map": "/HackUniversityGlassy/static/js/2.437a5fd9.chunk.js.map",
+  "static/js/2.655a5d71.chunk.js": "/HackUniversityGlassy/static/js/2.655a5d71.chunk.js",
+  "static/js/2.655a5d71.chunk.js.map": "/HackUniversityGlassy/static/js/2.655a5d71.chunk.js.map",
   "index.html": "/HackUniversityGlassy/index.html",
-  "precache-manifest.6cb67bf2b123fe3f7e677f34f475e11b.js": "/HackUniversityGlassy/precache-manifest.6cb67bf2b123fe3f7e677f34f475e11b.js",
+  "precache-manifest.6e4d4001318732670ffc46dadff17a87.js": "/HackUniversityGlassy/precache-manifest.6e4d4001318732670ffc46dadff17a87.js",
   "service-worker.js": "/HackUniversityGlassy/service-worker.js",
-  "static/css/2.d329aeec.chunk.css.map": "/HackUniversityGlassy/static/css/2.d329aeec.chunk.css.map"
+  "static/css/2.d329aeec.chunk.css.map": "/HackUniversityGlassy/static/css/2.d329aeec.chunk.css.map",
+  "static/css/main.f6c3601c.chunk.css.map": "/HackUniversityGlassy/static/css/main.f6c3601c.chunk.css.map"
 }
