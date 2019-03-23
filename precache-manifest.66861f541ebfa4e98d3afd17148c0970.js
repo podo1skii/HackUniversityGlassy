@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/HackUniversityGlassy/static/js/2.fc08137c.chunk.js"
   },
   {
-    "revision": "f66156d379f989f8548db01789305c79",
+    "revision": "e4d2823895ebf231bf264459dab52fed",
     "url": "/HackUniversityGlassy/index.html"
   }
 ];
