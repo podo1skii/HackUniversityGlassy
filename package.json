@@ -2,7 +2,7 @@
   "name": "HackUniversityGlassy",
   "version": "1.0.0",
   "description": "",
-  "homepage":"https://podo1skii.github.io/HackUniversityGlassy/",
+  "homepage": "https://podo1skii.github.io/HackUniversityGlassy/",
   "main": "index.js",
   "scripts": {
     "start": "cross-env PORT=10888 react-scripts start",

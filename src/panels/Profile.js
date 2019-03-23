@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Panel, PanelHeader, HeaderButton, Group, List, ListItem,HorizontalScroll, Cell, Avatar, platform, IOS, Button, Div, Footer } from '@vkontakte/vkui';
-import {getAgeByBDate, getDescriptionAge, transformTextStatus, colorTextStatus} from '../functions.js'
+import {getAgeByBDate, getDescriptionAge, transformTextStatus, colorTextStatus, getUserLevel} from '../functions.js'
 
 import Icon24Done from '@vkontakte/icons/dist/24/done';
 import Icon24Place from '@vkontakte/icons/dist/24/place';
@@ -47,7 +47,7 @@ class Profile extends React.Component {
         return (
             <View id="profile" activePanel={this.state.activePanel}>
                 <Panel id="profile">
-                    <PanelHeader>1Профиль</PanelHeader>
+                    <PanelHeader>Профиль</PanelHeader>
                     {this.props.fetchedUser &&
                     <React.Fragment>
                         <Group>
@@ -55,7 +55,7 @@ class Profile extends React.Component {
                                 before={this.props.fetchedUser.photo_200 ? <Avatar size={60} src={this.props.fetchedUser.photo_200}/> : null}
                                 size='l'
                                 description={getDescriptionAge(getAgeByBDate(this.props.fetchedUser.bdate)) +', '+(this.props.fetchedUser.city && this.props.fetchedUser.city.title ? this.props.fetchedUser.city.title : '')}
-                                bottomContent={<div style={{ display: 'flex' }}><Icon12Fire style={{color: colorTextStatus(30)}}/><div style={{lineHeight:'14px',fontSize:'14px', color: colorTextStatus(30),paddingLeft: '6px'}}>{transformTextStatus(1,'Новенький')}</div></div>}
+                                bottomContent={<div style={{ display: 'flex' }}><Icon12Fire style={{color: colorTextStatus(30)}}/><div style={{lineHeight:'14px',fontSize:'14px', color: colorTextStatus(30),paddingLeft: '6px'}}>{transformTextStatus(1,'Паренек')} {getUserLevel(1)}</div></div>}
                             >
                                 {`${this.props.fetchedUser.first_name} ${this.props.fetchedUser.last_name}`}
                             </Cell>
