@@ -6,9 +6,11 @@ import '@vkontakte/vkui/dist/vkui.css';
 import Icon28User from '@vkontakte/icons/dist/28/user';
 import Icon28Place from '@vkontakte/icons/dist/28/place';
 import Icon28Favorite from '@vkontakte/icons/dist/28/favorite';
-
+import Icon28Newsfeed from '@vkontakte/icons/dist/28/newsfeed';
+import Icon28More from '@vkontakte/icons/dist/28/more';
 
 import Profile from './panels/Profile';
+import Events from './panels/Events';
 
 class App extends React.Component {
 	constructor (props) {
@@ -55,14 +57,14 @@ class App extends React.Component {
 				<Tabbar>
 					<TabbarItem
 						onClick={this.onStoryChange}
-						selected={this.state.activeStory === 'events'}
-						data-story="events"
-					><Icon28Favorite /></TabbarItem>
+						selected={this.state.activeStory === 'feed'}
+						data-story="feed"
+					><Icon28Newsfeed /></TabbarItem>
 					<TabbarItem
 						onClick={this.onStoryChange}
-						selected={this.state.activeStory === 'map'}
-						data-story="map"
-					><Icon28Place /></TabbarItem>
+						selected={this.state.activeStory === 'events'}
+						data-story="events"
+					><Icon28More /></TabbarItem>
 				  	<TabbarItem
 						onClick={this.onStoryChange}
 						selected={this.state.activeStory === 'profile'}
@@ -71,6 +73,7 @@ class App extends React.Component {
 				</Tabbar>
 				}>
 				<Profile id="profile" fetchedUser={this.state.fetchedUser} />
+				<Events id="events" fetchedUser={this.state.fetchedUser} />
 			</Epic>
 		);
 	}
