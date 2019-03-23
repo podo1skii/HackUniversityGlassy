@@ -1,0 +1,2 @@
+.grid-images{margin:5px;display:grid;()grid-template:repeat(3,calc((100% - 40px)/3))/repeat(auto,100px);grid-gap:10px}.box{background:#000}
+/*# sourceMappingURL=main.c7aa2a4a.chunk.css.map */
