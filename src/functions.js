@@ -43,9 +43,8 @@ export function transformTextStatus(value,sex){
 }
 
 export function getUserLevel(value){
-    let res = value + ' lvl';
-    let nextLvl = value + 1;
-    return res + '. 100 xp to ' + nextLvl + ' lvl';
+    let res = value + ' ур.';
+    return res;
 }
 
 export function colorTextStatus(value){
