@@ -1,44 +1,43 @@
 import React from 'react';
-import connect from '@vkontakte/vkui-connect';
-import { View, Panel, PanelHeader, HeaderButton, Group, List, ListItem, Cell, Avatar, platform, IOS, Button, Div, Footer } from '@vkontakte/vkui';
-import '@vkontakte/vkui/dist/vkui.css';
-import Icon24MoreHorizontal from '@vkontakte/icons/dist/24/more_horizontal';
+import { PanelHeader, Group, List, Cell, CellButton, IOS, Avatar, HeaderButton, platform, HorizontalScroll, InfoRow, Link, Header } from '@vkontakte/vkui';
+
+import '../Style.css'
+import { getGames, serverResponse,getGameProfile, takePartGame } from '../Functions/requestsDatabase';
+import { inGameDate, dateTransform, dateReverse, dateDB, validityMatches, getColorValidity, priceForPerson } from '../Functions/processing';
+import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
+import Icon24Back from '@vkontakte/icons/dist/24/back';
+import Icon24MoneyTransfer from '@vkontakte/icons/dist/24/money_transfer';
+import Icon28InfoOutline from '@vkontakte/icons/dist/28/info_outline';
+
+const osname = platform();
 
 
-class EventInfo  extends React.Component{
+class EventInfo extends React.Component {
     constructor (props) {
 		super(props);
 		this.state = {
-            
-		};
-        this.onChangePanel = this.onChangePanel.bind(this);
-	}
 
-    onChangePanel(e) {
-        this.setState({ activePanel: e.currentTarget.dataset.panel });
+		};
+    }
+
+    componentWillMount() {
     }
 
     render() {
         return (
-            <View id="events" activePanel={this.state.activePanel}>
-                <Panel id="events">
-                    <PanelHeader>Мои события</PanelHeader>
+            <React.Fragment>
+                <PanelHeader
+                    left={<HeaderButton
+                        onClick={() => {this.props.onUpdatePanel('events', null, null)}}
+                    >
+                        {osname === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
+                    </HeaderButton>}
+                >
+                    Игра
+                </PanelHeader>
 
-                    <React.Fragment>
-                        <Group>
-                            <List>
-                            <Cell
-                              before={<Avatar size={60} />}
-                              size="l"
-                              description={<div>Концерт, Балтийская ул 66</div>}
-                              asideContent={<div style={{fontSize:'14px'}}><div>22 марта</div><div>18:00</div></div>}
-                            ><div><div>Маятник Фуко</div><div style={{ color: '#9ea1a5',fontWeight:'500', fontSize: '14px'}}>Gone Fludd</div></div>
-                              </Cell>
-                            </List>
-                        </Group>
-                    </React.Fragment>
-                </Panel>
-            </View>
+                
+            </React.Fragment>
         );
     }
 }
