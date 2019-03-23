@@ -1,5 +1,5 @@
 {
-  "main.css": "/HackUniversityGlassy/static/css/main.a05c4aa2.chunk.css",
+  "main.css": "/HackUniversityGlassy/static/css/main.fcf55002.chunk.css",
   "main.js": "/HackUniversityGlassy/static/js/main.87e0f9a8.chunk.js",
   "main.js.map": "/HackUniversityGlassy/static/js/main.87e0f9a8.chunk.js.map",
   "runtime~main.js": "/HackUniversityGlassy/static/js/runtime~main.71f94ddc.js",
@@ -8,8 +8,8 @@
   "static/js/2.6fce8234.chunk.js": "/HackUniversityGlassy/static/js/2.6fce8234.chunk.js",
   "static/js/2.6fce8234.chunk.js.map": "/HackUniversityGlassy/static/js/2.6fce8234.chunk.js.map",
   "index.html": "/HackUniversityGlassy/index.html",
-  "precache-manifest.f4847d393842903a86553c712126c8bf.js": "/HackUniversityGlassy/precache-manifest.f4847d393842903a86553c712126c8bf.js",
+  "precache-manifest.8f66516c45e6fb8469f6b863fe925345.js": "/HackUniversityGlassy/precache-manifest.8f66516c45e6fb8469f6b863fe925345.js",
   "service-worker.js": "/HackUniversityGlassy/service-worker.js",
   "static/css/2.d329aeec.chunk.css.map": "/HackUniversityGlassy/static/css/2.d329aeec.chunk.css.map",
-  "static/css/main.a05c4aa2.chunk.css.map": "/HackUniversityGlassy/static/css/main.a05c4aa2.chunk.css.map"
+  "static/css/main.fcf55002.chunk.css.map": "/HackUniversityGlassy/static/css/main.fcf55002.chunk.css.map"
 }
