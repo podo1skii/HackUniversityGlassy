@@ -62,9 +62,33 @@ class Events  extends React.Component{
                             <Cell
                               before={<Avatar size={64} />}
                               size="l"
-                              description={<div>Концерт, Балтийская ул 66</div>}
+                              description={<div>Концерт, Альпенхаус</div>}
                               onClick={() => this.setState({ activePanel: 'eventinfo' })}
-                              asideContent={<div style={{fontSize:'14px'}}><div>22 марта</div><div>18:00</div></div>}
+                              asideContent={<div style={{fontSize:'14px'}}><div>19 мая</div><div>20:00</div></div>}
+                            ><div><div>Guthrie Govan</div><div style={{ color: '#9ea1a5',fontWeight:'500', fontSize: '14px'}}>Gone Fludd</div></div>
+                              </Cell>
+                            </List>
+                        </Group>
+                        <Group>
+                            <List>
+                            <Cell
+                              before={<Avatar size={64} />}
+                              size="l"
+                              description={<div>Концерт, ZAL</div>}
+                              onClick={() => this.setState({ activePanel: 'eventinfo' })}
+                              asideContent={<div style={{fontSize:'14px'}}><div>28 марта</div><div>20:00</div></div>}
+                            ><div><div>Tommy Cash</div><div style={{ color: '#9ea1a5',fontWeight:'500', fontSize: '14px'}}>Gone Fludd</div></div>
+                              </Cell>
+                            </List>
+                        </Group>
+                        <Group>
+                            <List>
+                            <Cell
+                              before={<Avatar size={64} />}
+                              size="l"
+                              description={<div>Концерт, Клуб Морзе</div>}
+                              onClick={() => this.setState({ activePanel: 'eventinfo' })}
+                              asideContent={<div style={{fontSize:'14px'}}><div>30 августа</div><div>20:00</div></div>}
                             ><div><div>Маятник Фуко</div><div style={{ color: '#9ea1a5',fontWeight:'500', fontSize: '14px'}}>Gone Fludd</div></div>
                               </Cell>
                             </List>
@@ -74,9 +98,9 @@ class Events  extends React.Component{
                             <Cell
                               before={<Avatar size={64} />}
                               size="l"
-                              description={<div>Концерт, Балтийская ул 66</div>}
+                              description={<div>Концерт, Сибур арена</div>}
                               onClick={() => this.setState({ activePanel: 'eventinfo' })}
-                              asideContent={<div style={{fontSize:'14px'}}><div>22 марта</div><div>18:00</div></div>}
+                              asideContent={<div style={{fontSize:'14px'}}><div>5 апреля</div><div>20:00</div></div>}
                             ><div><div>Маятник Фуко</div><div style={{ color: '#9ea1a5',fontWeight:'500', fontSize: '14px'}}>Gone Fludd</div></div>
                               </Cell>
                             </List>
@@ -86,34 +110,10 @@ class Events  extends React.Component{
                             <Cell
                               before={<Avatar size={64} />}
                               size="l"
-                              description={<div>Концерт, Балтийская ул 66</div>}
+                              description={<div>Концерт, Ледовый Дворец</div>}
                               onClick={() => this.setState({ activePanel: 'eventinfo' })}
-                              asideContent={<div style={{fontSize:'14px'}}><div>22 марта</div><div>18:00</div></div>}
-                            ><div><div>Маятник Фуко</div><div style={{ color: '#9ea1a5',fontWeight:'500', fontSize: '14px'}}>Gone Fludd</div></div>
-                              </Cell>
-                            </List>
-                        </Group>
-                        <Group>
-                            <List>
-                            <Cell
-                              before={<Avatar size={64} />}
-                              size="l"
-                              description={<div>Концерт, Балтийская ул 66</div>}
-                              onClick={() => this.setState({ activePanel: 'eventinfo' })}
-                              asideContent={<div style={{fontSize:'14px'}}><div>22 марта</div><div>18:00</div></div>}
-                            ><div><div>Маятник Фуко</div><div style={{ color: '#9ea1a5',fontWeight:'500', fontSize: '14px'}}>Gone Fludd</div></div>
-                              </Cell>
-                            </List>
-                        </Group>
-                        <Group>
-                            <List>
-                            <Cell
-                              before={<Avatar size={64} />}
-                              size="l"
-                              description={<div>Концерт, Балтийская ул 66</div>}
-                              onClick={() => this.setState({ activePanel: 'eventinfo' })}
-                              asideContent={<div style={{fontSize:'14px'}}><div>22 марта</div><div>18:00</div></div>}
-                            ><div><div>Маятник Фуко</div><div style={{ color: '#9ea1a5',fontWeight:'500', fontSize: '14px'}}>Gone Fludd</div></div>
+                              asideContent={<div style={{fontSize:'14px'}}><div>11 июня</div><div>20:00</div></div>}
+                            ><div><div>KISS</div><div style={{ color: '#9ea1a5',fontWeight:'500', fontSize: '14px'}}>Gone Fludd</div></div>
                               </Cell>
                             </List>
                         </Group>
