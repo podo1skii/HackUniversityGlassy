@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "14d3630d22fc67a86c0e",
+    "revision": "c6cfcaf14c556774b7c5",
     "url": "/HackUniversityGlassy/static/css/main.e016c130.chunk.css"
   },
   {
-    "revision": "14d3630d22fc67a86c0e",
-    "url": "/HackUniversityGlassy/static/js/main.55203b9f.chunk.js"
+    "revision": "c6cfcaf14c556774b7c5",
+    "url": "/HackUniversityGlassy/static/js/main.d71ba8d5.chunk.js"
   },
   {
     "revision": "8d6f0018118ba83a21d6",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/HackUniversityGlassy/static/js/2.1c01495d.chunk.js"
   },
   {
-    "revision": "a94cac760d4144de05a2a9bb35e8cfa4",
+    "revision": "87924d960b0d9d97b0ae02f91df611b4",
     "url": "/HackUniversityGlassy/index.html"
   }
 ];
