@@ -4,8 +4,6 @@ import { Epic, Tabbar, TabbarItem } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Icon28User from '@vkontakte/icons/dist/28/user';
-import Icon28Place from '@vkontakte/icons/dist/28/place';
-import Icon28Favorite from '@vkontakte/icons/dist/28/favorite';
 import Icon28Newsfeed from '@vkontakte/icons/dist/28/newsfeed';
 import Icon28More from '@vkontakte/icons/dist/28/more';
 
@@ -29,6 +27,11 @@ class App extends React.Component {
 	}
 
 	componentDidMount() {
+
+
+	}
+
+	render() {
 		connect.subscribe((e) => {
 			switch (e.detail.type) {
 				case 'VKWebAppGetUserInfoResult':
@@ -39,21 +42,6 @@ class App extends React.Component {
 			}
 		});
 		connect.send('VKWebAppGetUserInfo', {});
-
-		connect.subscribe((e) => {
-			console.log(e.detail);
-			switch (e.detail.type) {
-				case 'VKWebAppGeodataResult':
-					this.setState({ locationUser: e.detail.data });
-					break;
-				default:
-					console.log(e.detail.type);
-			}
-		});
-		connect.send('VKWebAppGetGeodata', {});
-	}
-
-	render() {
 		return (
 			<Epic activeStory={this.state.activeStory} tabbar={
 				<Tabbar>

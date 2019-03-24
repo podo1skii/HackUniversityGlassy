@@ -1,8 +1,6 @@
 import React from 'react';
-import connect from '@vkontakte/vkui-connect';
-import { View, Panel, PanelHeader, HeaderButton,Gallery, Group, List, ListItem, Cell, Avatar, platform, IOS, Button, Div, Footer } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
-import Icon24MoreHorizontal from '@vkontakte/icons/dist/24/more_horizontal';
+import NameForm from './NameForm';
 
 
 class Emotions extends React.Component{
@@ -10,7 +8,7 @@ class Emotions extends React.Component{
 		super(props);
 		this.state = {
             activePanel: 'events'
-		};
+        }
         this.onChangePanel = this.onChangePanel.bind(this);
 	}
 
@@ -19,26 +17,22 @@ class Emotions extends React.Component{
     }
 
 
+
     render(){
         return (<React.Fragment>
-            <div class='grid-images'>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
-                <div class='box'>123</div>
+            <NameForm/>
+
+            <div className='grid-images'>
+                <div className='box'>123</div>
+                <div className='box'>123</div>
+                <div className='box'>123</div>
+                <div className='box'>123</div>
+                <div className='box'>123</div>
+                <div className='box'>123</div>
+                <div className='box'>123</div>
+                <div className='box'>123</div>
             </div>
+
         </React.Fragment>)
     }
 }

@@ -1,18 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { View, Panel, PanelHeader, HeaderButton, Group, List, ListItem,HorizontalScroll, Cell, Avatar, platform, IOS, Button, Div, Footer } from '@vkontakte/vkui';
+import { View, Panel, PanelHeader, Group, List,HorizontalScroll, Cell, Avatar} from '@vkontakte/vkui';
 import {getAgeByBDate, getDescriptionAge, transformTextStatus, colorTextStatus, getUserLevel} from '../functions.js'
 
-import Icon24Done from '@vkontakte/icons/dist/24/done';
 import Icon24Place from '@vkontakte/icons/dist/24/place';
-import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
-import Icon24Back from '@vkontakte/icons/dist/24/back';
-import Icon24Flash from '@vkontakte/icons/dist/24/flash';
-import Icon24Message from '@vkontakte/icons/dist/24/message';
-import Icon24User from '@vkontakte/icons/dist/24/user';
 import Icon12Fire from '@vkontakte/icons/dist/12/fire';
 
-const osname = platform();
 
 class Profile extends React.Component {
     constructor (props) {
@@ -74,26 +66,15 @@ class Profile extends React.Component {
                             <HorizontalScroll>
                               <div style={{ display: 'flex' }}>
                                 <div style={{ ...itemStyle, paddingLeft: 4 }}>
-                                  <img src='https://image.flaticon.com/icons/svg/1601/1601634.svg' style={{height: '64px',width: '64px'}}/>
+                                  <img src='https://image.flaticon.com/icons/svg/1601/1601634.svg' alt='archieve' style={{height: '64px',width: '64px'}}/>
                                 </div>
                                 <div style={itemStyle}>
-                                  <img src='https://image.flaticon.com/icons/svg/1490/1490546.svg' style={{height: '64px',width: '64px'}}/>
+                                  <img src='https://image.flaticon.com/icons/svg/1490/1490546.svg' alt='archieve' style={{height: '64px',width: '64px'}}/>
                                 </div>
                                 <div style={itemStyle}>
-                                  <img src='https://image.flaticon.com/icons/svg/1490/1490542.svg' style={{height: '64px',width: '64px'}}/>
+                                  <img src='https://image.flaticon.com/icons/svg/1490/1490542.svg' alt='archieve' style={{height: '64px',width: '64px'}}/>
                                 </div>
-                                <div style={itemStyle}>
-                                  <img src='https://image.flaticon.com/icons/svg/1490/1490543.svg' style={{height: '64px',width: '64px'}}/>
-                                </div>
-                                <div style={itemStyle}>
-                                  <img src='https://image.flaticon.com/icons/svg/610/610333.svg' style={{height: '64px',width: '64px'}}/>
-                                </div>
-                                <div style={itemStyle}>
-                                  <img src='https://image.flaticon.com/icons/svg/1541/1541393.svg' style={{height: '64px',width: '64px'}}/>
-                                </div>
-                                <div style={itemStyle}>
-                                  <img src='https://image.flaticon.com/icons/svg/610/610333.svg' style={{height: '64px',width: '64px'}}/>
-                                </div>
+
                               </div>
                             </HorizontalScroll>
                             </List>

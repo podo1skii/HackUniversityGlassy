@@ -25,13 +25,10 @@ export function transformTextStatus(value,sex){
     switch (true) {
         case (value <= 10):
             return 'Домосед';
-            break;
         case (value <= 30):
             return 'Фанат';
-            break;
         case (value <= 50):
             return 'Патимейкер';
-            break;
         default:
             if (sex === 2) {
                 return 'Король вечеринок';
@@ -51,13 +48,10 @@ export function colorTextStatus(value){
     switch (true) {
         case (value <= 10):
             return '#228B22';
-            break;
         case (value <= 30):
             return '#5281b7';
-            break;
         case (value <= 50):
             return '#FF7F50';
-            break;
         default:
             return '#FF0000';
     }

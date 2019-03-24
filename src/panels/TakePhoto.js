@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Panel, PanelHeader, HeaderButton,File, Group, List, ListItem,HorizontalScroll,FormLayout, Cell, Avatar, platform, IOS, Button, Div, Footer } from '@vkontakte/vkui';
 import {getAgeByBDate, getDescriptionAge, transformTextStatus, colorTextStatus} from '../functions.js'
 
 import Icon24Done from '@vkontakte/icons/dist/24/done';
@@ -12,7 +11,7 @@ import Icon24Message from '@vkontakte/icons/dist/24/message';
 import Icon24User from '@vkontakte/icons/dist/24/user';
 import Icon12Fire from '@vkontakte/icons/dist/12/fire';
 
-const osname = platform();
+
 
 class TakePhoto extends React.Component {
     constructor (props) {
@@ -20,10 +19,13 @@ class TakePhoto extends React.Component {
 		this.state = {
             activePanel: 'profile',
             city: 'Санкт-Петербург',
+            value:'',
             gameCount: '',
             team: ''
 		};
         this.onChangePanel = this.onChangePanel.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
     onChangePanel(e) {
@@ -33,51 +35,28 @@ class TakePhoto extends React.Component {
 	componentDidMount() {
 	}
 
-    _onChange = (e) => {
 
-      const file    = this.refs.uploadImg.files[0]
-      const reader  = new FileReader();
+    handleChange(event) {
+        this.setState({value: event.target.value});
+      }
 
-      reader.onloadend = () => {
-          this.setState({
-              imageUrl: reader.result
-          })
-      }
-      if (file) {
-          reader.readAsDataURL(file);
-          this.setState({
-              imageUrl :reader.result
-
-          })
-          // document.getElementById('loadImg').setAttribute('height','400px');
-          document.getElementById('loadImg').setAttribute('width','100%');
-          document.getElementById('loadImg').setAttribute('display','block');
-      }
-      else {
-          this.setState({
-              imageUrl: ""
-          })
-      }
-    }
+      handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
     render(){
         return (
-            <View id="profile" activePanel={this.state.activePanel}>
-                <Panel id="profile">
-                    <PanelHeader>Фото</PanelHeader>
-                    <form onSubmit={this.onSubmit} >
+            <React.Fragment>
+                    <form onSubmit={this.handleSubmit} >
                           <input
-                             ref="uploadImg"
-                             type="file"
-                             name="selectedFile"
-                             onChange={this._onChange}
+                             type="text"
+
+                            value={this.state.value} onChange={this.handleChange}
                             />
                     </form>
 
-                    <img id='loadImg'src={this.state.imageUrl}/>
-
-
-                </Panel>
-            </View>
+                    <input type="submit" value="Загрузить123"/>
+                </React.Fragment>
             )}
 }
 export default TakePhoto;

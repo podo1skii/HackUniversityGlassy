@@ -1,0 +1,12 @@
+
+
+#connect-round{
+    border-radius: 50%;
+    width: 50vw;
+    height: 50vw;
+    position: absolute;
+    background: #f0040f;
+    top: 50%;
+    left: 25%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
