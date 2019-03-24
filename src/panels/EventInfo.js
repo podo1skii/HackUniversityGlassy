@@ -34,9 +34,7 @@ class EventInfo extends React.Component {
                     </HeaderButton>}
                 >
                     Игра
-                </PanelHeader>
-
-                
+                </PanelHeader>    
             </React.Fragment>
         );
     }

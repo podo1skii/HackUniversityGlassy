@@ -39,11 +39,6 @@ class Events  extends React.Component{
         }
     }
 
-
-
-
-
-
     render() {
         return (
             <View id="events" activePanel={this.state.activePanel}>

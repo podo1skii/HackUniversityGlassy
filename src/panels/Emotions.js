@@ -1,6 +1,5 @@
 import React from 'react';
 import '@vkontakte/vkui/dist/vkui.css';
-import NameForm from './NameForm';
 
 
 class Emotions extends React.Component{
@@ -20,8 +19,6 @@ class Emotions extends React.Component{
 
     render(){
         return (<React.Fragment>
-            <NameForm/>
-
             <div className='grid-images'>
                 <div className='box'>123</div>
                 <div className='box'>123</div>
